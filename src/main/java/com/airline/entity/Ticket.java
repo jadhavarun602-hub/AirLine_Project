@@ -11,68 +11,68 @@ import jakarta.persistence.ManyToOne;
 public class Ticket {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int tkId;
+
 	private String tkSeatnum;
 	private double tkPrice;
 	private String tkFlightNum;
-	
-	 @ManyToOne
-	 @JoinColumn(name = "airlineId")
-	 private Airline airline;
 
-	 @ManyToOne
-	 @JoinColumn(name = "passId")
-	 private Passenger passenger;
+	@ManyToOne
+	@JoinColumn(name = "airlineId")
+	private Airline airline;
 
-	 public int getTkId() {
-		 return tkId;
-	 }
+	@ManyToOne
+	@JoinColumn(name = "passId")
+	private Passenger passenger;
 
-	 public void setTkId(int tkId) {
-		 this.tkId = tkId;
-	 }
+	public int getTkId() {
+		return tkId;
+	}
 
-	 public String getTkSeatnum() {
-		 return tkSeatnum;
-	 }
+	public void setTkId(int tkId) {
+		this.tkId = tkId;
+	}
 
-	 public void setTkSeatnum(String tkSeatnum) {
-		 this.tkSeatnum = tkSeatnum;
-	 }
+	public String getTkSeatnum() {
+		return tkSeatnum;
+	}
 
-	 public double getTkPrice() {
-		 return tkPrice;
-	 }
+	public void setTkSeatnum(String tkSeatnum) {
+		this.tkSeatnum = tkSeatnum;
+	}
 
-	 public void setTkPrice(double tkPrice) {
-		 this.tkPrice = tkPrice;
-	 }
+	public double getTkPrice() {
+		return tkPrice;
+	}
 
-	 public String getTkFlightNum() {
-		 return tkFlightNum;
-	 }
+	public void setTkPrice(double tkPrice) {
+		this.tkPrice = tkPrice;
+	}
 
-	 public void setTkFlightNum(String tkFlightNum) {
-		 this.tkFlightNum = tkFlightNum;
-	 }
+	public String getTkFlightNum() {
+		return tkFlightNum;
+	}
 
-	 public Airline getAirline() {
-		 return airline;
-	 }
+	public void setTkFlightNum(String tkFlightNum) {
+		this.tkFlightNum = tkFlightNum;
+	}
 
-	 public void setAirline(Airline airline) {
-		 this.airline = airline;
-	 }
+	public Airline getAirline() {
+		return airline;
+	}
 
-	 public Passenger getPassenger() {
-		 return passenger;
-	 }
+	public void setAirline(Airline airline) {
+		this.airline = airline;
+	}
 
-	 public void setPassenger(Passenger passenger) {
-		 this.passenger = passenger;
-	 }
-	 
-	 
+	public Passenger getPassenger() {
+		return passenger;
+	}
+
+	public void setPassenger(Passenger passenger) {
+		this.passenger = passenger;
+	}
+
 	
 }

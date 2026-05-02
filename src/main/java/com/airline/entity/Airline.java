@@ -10,16 +10,17 @@ import jakarta.persistence.OneToMany;
 
 @Entity
 public class Airline {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int airlineId;
+
 	private String airlineName;
 	private String airlineCode;
 	private String airlineCountry;
-	
-	@OneToMany(mappedBy="airline")
-	private List<Ticket> ticket;
+
+	@OneToMany(mappedBy = "airline")
+	private List<Ticket> tickets;
 
 	public int getAirlineId() {
 		return airlineId;
@@ -53,13 +54,13 @@ public class Airline {
 		this.airlineCountry = airlineCountry;
 	}
 
-	public List<Ticket> getTicket() {
-		return ticket;
+	public List<Ticket> getTickets() {
+		return tickets;
 	}
 
-	public void setTicket(List<Ticket> ticket) {
-		this.ticket = ticket;
+	public void setTickets(List<Ticket> tickets) {
+		this.tickets = tickets;
 	}
-	
+
 	
 }
