@@ -5,8 +5,6 @@ public class TicketDTO {
 	private String tkSeatnum;
 	private double tkPrice;
 	private String tkFlightNum;
-
-	
 	private int airlineId;
 	private int passengerId;
 
